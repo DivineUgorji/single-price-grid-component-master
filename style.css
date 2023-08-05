@@ -1,0 +1,144 @@
+:root{
+    --primary-color: hsl(179, 62%, 43%);
+    /* --primary-color-accent: hsla(179, 62%, 48%, 1); */
+    --primary-color-accent: hsla(179, 68%, 43%, 1);
+    --plain-color: hsl(0%, 0%, 100%);
+    /* --primary-color-accent: hsl(180, 38%, 60%); */
+    --secondary-color: hsl(204, 43%, 93%);
+    --secondary-color-accent: hsl(218, 22%, 67%);
+    --yellow-accent: hsl(71, 73%, 54%);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  input, button, textarea, select {
+    font: inherit;
+  }
+ 
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+
+body{
+    font-family: 'Karla', sans-serif;
+    font-weight: 450;
+    background-color: var(--secondary-color);
+    /* max-width: 1100px; */
+}
+
+section{
+    padding: 2em 0;
+    /* max-height: 20rem; */
+} 
+
+.container{
+    /* width: 100%;
+    padding: 1rem 2rem;
+    margin: 0 auto; */
+
+    width: 85%;
+    margin: 0 auto;
+    max-width: 1128px;
+}
+
+.intro-section-title{
+    color: var(--primary-color);
+    font-family: 'Karla';
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.intro-section-sub-title{
+    color: var(--yellow-accent);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0 0 1rem 0;
+}
+
+.intro-section-text{
+    color: var(--secondary-color-accent);
+    line-height: 2;
+}
+
+.pricing-section{
+    color: #FFF;
+    background-color: var(--primary-color);
+}
+.price-text{
+    font-weight: 900;
+    font-size: 3rem;
+}
+.price-duration{
+    color: var(--secondary-color);
+    font-weight: 100;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+/* .price-section, .footer-section{
+    min-height: 15rem;;
+} */
+
+.footer-section{
+    background-color: var(--primary-color-accent);
+    color: var(--secondary-color);
+    padding: 1rem 0;
+}
+
+.footer-section-container{
+    margin: 0.5rem 0;
+}
+
+.button{
+    color: var(--secondary-color);
+    text-align: center;
+    font-weight: 700;
+    background-color: var(--yellow-accent);
+    border: 0;
+    border-radius: 0.495rem 0.495rem;
+    margin: 2rem 0;
+    padding: 1em 2em;
+    width: 90%;
+}
+
+@media (min-width: 600px) {
+    .card-component{
+        background-color: #FFF;
+        max-width: 46rem;
+        min-height: 100vh;
+        border-radius: 0.512rem;
+        margin: 0 auto;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    .flex-group{
+        max-width: 100%;
+        
+    }
+
+    .flex-group-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* margin: 5em 2em; */
+    }
+
+}
+
