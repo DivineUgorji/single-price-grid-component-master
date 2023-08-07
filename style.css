@@ -1,13 +1,23 @@
 :root{
     --primary-color: hsl(179, 62%, 43%);
     /* --primary-color-accent: hsla(179, 62%, 48%, 1); */
-    --primary-color-accent: hsla(179, 68%, 43%, 1);
+    /* --primary-color-accent: hsla(179, 68%, 43%, 1); */
+    --primary-color-accent: #4ABFBC;
     --plain-color: hsl(0%, 0%, 100%);
-    /* --primary-color-accent: hsl(180, 38%, 60%); */
     --secondary-color: hsl(204, 43%, 93%);
     --secondary-color-accent: hsl(218, 22%, 67%);
     --yellow-accent: hsl(71, 73%, 54%);
+
+    .attribution {
+        font-size: 11px; 
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+       }
 }
+ 
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -37,14 +47,24 @@
 
 body{
     font-family: 'Karla', sans-serif;
-    font-weight: 450;
+    font-weight: 400;
     background-color: var(--secondary-color);
+    min-height: 100vh;
     /* max-width: 1100px; */
+}
+.card-component{
+    background-color: #FFF;
+    width: 60%;
+    /* min-height: 100vh; */
+    border-radius: 0.512rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 section{
-    padding: 2em 0;
-    /* max-height: 20rem; */
+    padding: 2rem 0;
+    /* max-height: 20rem;*/
 } 
 
 .container{
@@ -52,8 +72,9 @@ section{
     padding: 1rem 2rem;
     margin: 0 auto; */
 
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
+    /* padding: 0 2rem; */
     max-width: 1128px;
 }
 
@@ -61,46 +82,62 @@ section{
     color: var(--primary-color);
     font-family: 'Karla';
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.985rem;
+}
+
+.intro-text-group {
+    margin: 1rem 0;
 }
 
 .intro-section-sub-title{
     color: var(--yellow-accent);
     font-size: 1rem;
     font-weight: 700;
-    padding: 0 0 1rem 0;
+
+    /* padding: 0 0 1rem 0; */
 }
 
 .intro-section-text{
     color: var(--secondary-color-accent);
     line-height: 2;
+    margin-top: 0.5rem;
 }
 
 .pricing-section{
     color: #FFF;
     background-color: var(--primary-color);
 }
+
+.pricing-group-text {
+    margin-top: 0.5rem;
+}
 .price-text{
-    font-weight: 900;
-    font-size: 3rem;
+    font-weight: 700;
+    font-size: 2rem;
 }
 .price-duration{
     color: var(--secondary-color);
-    font-weight: 100;
-    font-size: 1rem;
-    padding: 0.5rem;
+    font-size: 0.95rem;
+    /* padding: 0.5rem; */
 }
 
-/* .price-section, .footer-section{
-    min-height: 15rem;;
-} */
+.span-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
 
 .footer-section{
     background-color: var(--primary-color-accent);
     color: var(--secondary-color);
-    padding: 1rem 0;
+    border-radius: 0 0 0.295rem 0.295rem;
+    /* padding: 1rem 0; */
 }
 
+.footer-title {
+    color: #FFF;
+}
 .footer-section-container{
     margin: 0.5rem 0;
 }
@@ -109,35 +146,50 @@ section{
     color: var(--secondary-color);
     text-align: center;
     font-weight: 700;
+    font-size: 0.95rem;
     background-color: var(--yellow-accent);
     border: 0;
-    border-radius: 0.495rem 0.495rem;
+    border-radius: 0.295rem 0.295rem;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.10);
     margin: 2rem 0;
-    padding: 1em 2em;
-    width: 90%;
+    overflow: hidden;
+    padding: 0.85em 1.495em;
+    width: 100%;
 }
 
 @media (min-width: 600px) {
+    .intro-section-text {
+        font-size: 1rem;
+        font-weight: 500;
+        /* margin-top: 0.5rem; */
+    }
+
     .card-component{
         background-color: #FFF;
-        max-width: 46rem;
-        min-height: 100vh;
+        width: 40rem;
         border-radius: 0.512rem;
         margin: 0 auto;
         margin-top: 4rem;
         margin-bottom: 4rem;
     }
 
-    .flex-group{
-        max-width: 100%;
-        
+
+    .grid-group-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        overflow: hidden;
     }
 
-    .flex-group-container{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        /* margin: 5em 2em; */
+    .footer-section {
+        border-radius: 0 0 0.495rem 0;
+    }
+
+    .pricing-section {
+        border-radius: 0 0 0 0.495rem ;
+    }
+
+    .pricing-section, .footer-section {
+        padding: 2rem 1rem;
     }
 
 }
